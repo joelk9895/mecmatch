@@ -293,7 +293,7 @@ export default function Home() {
         <div className="max-w-6xl relative z-10">
           <StaggeredText
             text="DATING IS"
-            className="text-[10vw] font-black leading-[0.85] tracking-tighter mix-blend-difference"
+            className="text-5xl md:text-7xl lg:text-8xl font-black leading-none tracking-tighter mix-blend-difference mb-2"
           />
           <motion.div
             initial={{ scaleX: 0 }}
@@ -303,14 +303,14 @@ export default function Home() {
           />
           <BreakingText
             text="BROKEN."
-            className="text-[10vw] font-black leading-[0.85] tracking-tighter text-amber-200"
+            className="text-5xl md:text-7xl lg:text-8xl font-black leading-none tracking-tighter text-amber-200 mt-2"
           />
 
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1.2, duration: 0.5 }}
-            className="text-lg md:text-2xl lg:text-3xl text-blue-200/90 max-w-2xl mx-auto font-medium mt-8 md:mt-12 leading-relaxed tracking-wide"
+            className="text-lg md:text-xl lg:text-2xl text-blue-200/90 max-w-2xl mx-auto font-medium mt-8 md:mt-12 leading-snug tracking-tight"
           >
             Ghosting. Bots. Randoms that don't even go here. <br className="hidden md:block" />
             We're fixing it for <span className="text-white border-b-2 border-white/50 font-bold hover:border-white transition-colors">MEC</span>.
@@ -346,7 +346,7 @@ export default function Home() {
         <MarqueeText direction={-1} className="bg-black text-[#CCFF00] absolute bottom-8 md:bottom-12 -rotate-2 shadow-xl z-20 w-[120%]">NO BOTS • NO CATFISH • JUST STUDENTS •</MarqueeText>
 
         <div className="relative z-30 max-w-5xl mt-8 md:mt-16">
-          <h2 className="text-[10vw] md:text-[8vw] lg:text-[7vw] font-black text-black leading-[0.9] mb-8 md:mb-12 relative drop-shadow-xl">
+          <h2 className="text-6xl md:text-8xl lg:text-9xl font-black text-black leading-none tracking-tighter mb-8 md:mb-12 relative drop-shadow-xl">
             BUT NOT <br /> HERE.
             <motion.div
               initial={{ scale: 0, rotate: -45 }}
@@ -408,8 +408,8 @@ export default function Home() {
           className="relative z-40 grid md:grid-cols-2 items-center max-w-7xl mx-auto gap-12 w-full opacity-0 scale-90"
         >
           <div className="text-left px-4 md:px-0">
-            <StaggeredText text="FIND YOUR" className="text-4xl md:text-7xl font-black text-black leading-none justify-center md:justify-start" />
-            <StaggeredText text="CRUSH" className="text-5xl md:text-8xl font-black text-white stroke-black text-stroke-2 justify-center md:justify-start tracking-tighter" />
+            <StaggeredText text="FIND YOUR" className="text-4xl md:text-6xl lg:text-7xl font-black text-black leading-none tracking-tighter justify-center md:justify-start mb-2" />
+            <StaggeredText text="CRUSH" className="text-5xl md:text-7xl lg:text-8xl font-black text-white stroke-black text-stroke-2 leading-none tracking-tighter justify-center md:justify-start" />
           </div>
 
           <TiltCard className="w-full px-4 md:px-0">
@@ -421,7 +421,7 @@ export default function Home() {
 
               <div>
                 <h3 className="text-3xl md:text-5xl font-black mb-4 md:mb-6 uppercase tracking-tighter">Dating <br /> Mode</h3>
-                <p className="text-lg md:text-xl font-medium text-white/90 leading-relaxed">
+                <p className="text-base md:text-lg font-medium text-white/90 leading-normal">
                   Swipe right on people you actually see around campus.
                   Real connections. Real dates.
                 </p>
@@ -451,7 +451,7 @@ export default function Home() {
                 <div className="inline-flex items-center gap-2 mb-4 md:mb-6 bg-[#00F0FF] text-black px-3 py-1 md:px-4 md:py-1 rounded-full text-xs md:text-sm font-bold uppercase">
                   <CheckCircle2 className="w-3 h-3 md:w-4 h-4" /> Platonic Only
                 </div>
-                <p className="text-lg md:text-xl font-medium text-white/90 leading-relaxed">
+                <p className="text-base md:text-lg font-medium text-white/90 leading-normal">
                   Find study partners, gym bros, or a new squad.
                   Zero mixed signals. 100% chill.
                 </p>
@@ -462,8 +462,8 @@ export default function Home() {
           </TiltCard>
 
           <div className="text-right order-1 md:order-2 px-4 md:px-0">
-            <StaggeredText text="FIND YOUR" className="text-4xl md:text-7xl font-black text-black leading-none justify-center md:justify-end" />
-            <StaggeredText text="SQUAD" className="text-5xl md:text-8xl font-black text-white stroke-black text-stroke-2 justify-center md:justify-end tracking-tighter" />
+            <StaggeredText text="FIND YOUR" className="text-4xl md:text-6xl lg:text-7xl font-black text-black leading-none tracking-tighter justify-center md:justify-end mb-2" />
+            <StaggeredText text="SQUAD" className="text-5xl md:text-7xl lg:text-8xl font-black text-white stroke-black text-stroke-2 leading-none tracking-tighter justify-center md:justify-end" />
           </div>
         </div>
       </section>
@@ -475,7 +475,7 @@ export default function Home() {
         <div className="relative z-10">
           <StaggeredText
             text="READY?"
-            className="text-[14vw] md:text-[10vw] lg:text-[8vw] font-black leading-[0.9] mb-10 md:mb-14 tracking-tighter"
+            className="text-7xl md:text-9xl font-black leading-[0.9] mb-10 md:mb-14 tracking-tighter"
           />
 
           <Link href="/register" className="group relative inline-flex items-center justify-center">
