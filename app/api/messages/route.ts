@@ -4,6 +4,8 @@ import { prisma } from '@/lib/db'
 import { cookies } from 'next/headers'
 import { jwtVerify } from 'jose'
 
+export const dynamic = 'force-dynamic'
+
 // Helper to get current user
 async function getCurrentUser() {
     const cookieStore = await cookies()

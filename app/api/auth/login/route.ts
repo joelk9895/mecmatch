@@ -4,6 +4,8 @@ import { prisma } from '@/lib/db'
 import bcrypt from 'bcryptjs'
 import { SignJWT } from 'jose'
 
+export const dynamic = 'force-dynamic'
+
 export async function POST(req: Request) {
     try {
         const { email, password } = await req.json()
