@@ -293,7 +293,7 @@ export default function Home() {
         <div className="max-w-6xl relative z-10">
           <StaggeredText
             text="DATING IS"
-            className="text-[12vw] font-black leading-[0.85] tracking-tighter mix-blend-difference"
+            className="text-[10vw] font-black leading-[0.85] tracking-tighter mix-blend-difference"
           />
           <motion.div
             initial={{ scaleX: 0 }}
@@ -303,7 +303,7 @@ export default function Home() {
           />
           <BreakingText
             text="BROKEN."
-            className="text-[12vw] font-black leading-[0.85] tracking-tighter text-amber-200"
+            className="text-[10vw] font-black leading-[0.85] tracking-tighter text-amber-200"
           />
 
           <motion.p
@@ -346,7 +346,7 @@ export default function Home() {
         <MarqueeText direction={-1} className="bg-black text-[#CCFF00] absolute bottom-8 md:bottom-12 -rotate-2 shadow-xl z-20 w-[120%]">NO BOTS • NO CATFISH • JUST STUDENTS •</MarqueeText>
 
         <div className="relative z-30 max-w-5xl mt-8 md:mt-16">
-          <h2 className="text-[13vw] md:text-[9vw] lg:text-[8vw] font-black text-black leading-[0.9] mb-8 md:mb-12 relative drop-shadow-xl">
+          <h2 className="text-[10vw] md:text-[8vw] lg:text-[7vw] font-black text-black leading-[0.9] mb-8 md:mb-12 relative drop-shadow-xl">
             BUT NOT <br /> HERE.
             <motion.div
               initial={{ scale: 0, rotate: -45 }}
@@ -408,8 +408,8 @@ export default function Home() {
           className="relative z-40 grid md:grid-cols-2 items-center max-w-7xl mx-auto gap-12 w-full opacity-0 scale-90"
         >
           <div className="text-left px-4 md:px-0">
-            <StaggeredText text="FIND YOUR" className="text-5xl md:text-8xl font-black text-black leading-none justify-center md:justify-start" />
-            <StaggeredText text="CRUSH" className="text-6xl md:text-9xl font-black text-white stroke-black text-stroke-2 justify-center md:justify-start tracking-tighter" />
+            <StaggeredText text="FIND YOUR" className="text-4xl md:text-7xl font-black text-black leading-none justify-center md:justify-start" />
+            <StaggeredText text="CRUSH" className="text-5xl md:text-8xl font-black text-white stroke-black text-stroke-2 justify-center md:justify-start tracking-tighter" />
           </div>
 
           <TiltCard className="w-full px-4 md:px-0">
@@ -462,8 +462,8 @@ export default function Home() {
           </TiltCard>
 
           <div className="text-right order-1 md:order-2 px-4 md:px-0">
-            <StaggeredText text="FIND YOUR" className="text-5xl md:text-8xl font-black text-black leading-none justify-center md:justify-end" />
-            <StaggeredText text="SQUAD" className="text-6xl md:text-9xl font-black text-white stroke-black text-stroke-2 justify-center md:justify-end tracking-tighter" />
+            <StaggeredText text="FIND YOUR" className="text-4xl md:text-7xl font-black text-black leading-none justify-center md:justify-end" />
+            <StaggeredText text="SQUAD" className="text-5xl md:text-8xl font-black text-white stroke-black text-stroke-2 justify-center md:justify-end tracking-tighter" />
           </div>
         </div>
       </section>
@@ -475,7 +475,7 @@ export default function Home() {
         <div className="relative z-10">
           <StaggeredText
             text="READY?"
-            className="text-[18vw] md:text-[14vw] lg:text-[12vw] font-black leading-[0.9] mb-10 md:mb-14 tracking-tighter"
+            className="text-[14vw] md:text-[10vw] lg:text-[8vw] font-black leading-[0.9] mb-10 md:mb-14 tracking-tighter"
           />
 
           <Link href="/register" className="group relative inline-flex items-center justify-center">
