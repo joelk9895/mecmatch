@@ -1,0 +1,82 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id           String  @id @default(uuid())
+  email        String  @unique
+  passwordHash String
+  name         String
+  age          Int
+  bio          String?
+  image        String? // URL to profile image
+  instagram    String?
+  gender       String // "MALE", "FEMALE", "OTHER"
+  interestedIn String // "MALE", "FEMALE", "BOTH"
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  // Relationships
+  swipesSent     Swipe[] @relation("SwipesSent")
+  swipesReceived Swipe[] @relation("SwipesReceived")
+
+  matchesAsUser1 Match[] @relation("MatchUser1")
+  matchesAsUser2 Match[] @relation("MatchUser2")
+
+  messagesSent     Message[] @relation("MessageSender")
+  messagesReceived Message[] @relation("MessageReceiver")
+}
+
+model Swipe {
+  id        String   @id @default(uuid())
+  fromId    String
+  toId      String
+  direction String // "RIGHT" (like), "LEFT" (pass)
+  createdAt DateTime @default(now())
+
+  fromUser User @relation("SwipesSent", fields: [fromId], references: [id])
+  toUser   User @relation("SwipesReceived", fields: [toId], references: [id])
+
+  @@unique([fromId, toId]) // One swipe per pair
+}
+
+model Match {
+  id        String   @id @default(uuid())
+  user1Id   String
+  user2Id   String
+  type      String   @default("DATE") // "DATE", "FRIEND"
+  createdAt DateTime @default(now())
+
+  user1 User @relation("MatchUser1", fields: [user1Id], references: [id])
+  user2 User @relation("MatchUser2", fields: [user2Id], references: [id])
+
+  messages Message[]
+
+  @@unique([user1Id, user2Id])
+}
+
+model Message {
+  id        String   @id @default(uuid())
+  matchId   String
+  senderId  String
+  content   String
+  createdAt DateTime @default(now())
+
+  match  Match @relation(fields: [matchId], references: [id])
+  sender User  @relation("MessageSender", fields: [senderId], references: [id])
+
+  // Optional: for simpler querying if we lack match context sometimes, 
+  // but usually matchId is enough. 
+  // We add explicit receiver relation for easier notifications if needed later.
+  receiverId String
+  receiver   User   @relation("MessageReceiver", fields: [receiverId], references: [id])
+}
