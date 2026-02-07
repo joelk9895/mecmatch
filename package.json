@@ -11,8 +11,6 @@
   },
   "dependencies": {
     "@gsap/react": "^2.1.2",
-    "@libsql/client": "^0.17.0",
-    "@prisma/adapter-libsql": "^7.3.0",
     "@prisma/client": "^5.22.0",
     "@vercel/blob": "^2.1.0",
     "bcryptjs": "^3.0.3",
